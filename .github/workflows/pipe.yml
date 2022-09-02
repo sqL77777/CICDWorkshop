@@ -1,10 +1,6 @@
 name : CICD-Workshop
 
-on: 
-  release:
-    types: [pulished]
-    tag:
-    - v0.*
+on: [release]
 
 jobs:
   docker:

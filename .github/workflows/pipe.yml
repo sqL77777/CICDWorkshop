@@ -46,7 +46,7 @@ jobs:
                   "text": {
                     "type": "mrkdwn",
                     "text": "Name: ${{secrets.SLACK_NAME}} \n
-                             Matriculation: ${{secrets.SLACK_MARIC}} \n
+                             Matriculation: ${{secrets.MARIC}} \n
                              Email: ${{secrets.EMAIL}} \n
                              Repo: ${{github.repositoryUrl}} \n
                              Image name: ${{secrets.IMAGENAME}} \n

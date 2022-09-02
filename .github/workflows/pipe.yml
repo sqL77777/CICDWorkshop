@@ -1,10 +1,9 @@
 name : CICD-Workshop
 
 on:
-  release:
-    types: [published]
-    tag: 
-    - v0.*
+  push:
+    branches:
+    - releases/*
 
 jobs:
   docker:

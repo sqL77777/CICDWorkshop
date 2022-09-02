@@ -33,7 +33,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
+          context: .
           push: true
-          tags: 77777s/cicd:v0
-          
+          tags: user/app:latest
 		

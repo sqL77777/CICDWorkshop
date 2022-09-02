@@ -1,9 +1,6 @@
 name : CICD-Workshop
 
-on:
-  push:
-    branches:
-    - releases/*
+on: release
 
 jobs:
   docker:

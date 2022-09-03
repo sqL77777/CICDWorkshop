@@ -33,7 +33,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: 77777s/cicd:v1.0
+          tags: 77777s/cicd:${{  github.ref_name }}
           
           
       - name: Send submit message to Slack workflow
@@ -53,7 +53,8 @@ jobs:
                              Email: ${{secrets.EMAIL}} \n
                              Repo: ${{github.repositoryUrl}} \n
                              Image name: ${{secrets.IMAGENAME}} \n
-                             Image URL: ${{secrets.IMAGEURL}} \n"
+                             Image URL: ${{secrets.IMAGEURL}} \n
+                             "
                   }
                 }
               ]

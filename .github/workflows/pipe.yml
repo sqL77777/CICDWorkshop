@@ -1,7 +1,10 @@
 name : CICD-Workshop
 
-on: release
-
+on: 
+  release:
+    tags:
+      - '*'
+      
 jobs:
   docker:
     runs-on: ubuntu-latest

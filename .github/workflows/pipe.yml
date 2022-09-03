@@ -5,6 +5,7 @@ on:
     type: [published]
     tags:
       - '*'
+      - submission
       
 jobs:
   docker:

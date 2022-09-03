@@ -2,6 +2,7 @@ name : CICD-Workshop
 
 on: 
   release:
+    type: [published]
     tags:
       - '*'
       

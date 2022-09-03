@@ -1,18 +1,18 @@
 # syntax=docker/dockerfile:1
 
-FROM golang:1.16-alpine
+FROM golang:1.18 as builder   
 
 MAINTAINER Siqi Liu
+ 
+WORKDIR /app
 
-WORKDIR /go/src/COPY . .
+ADD . /app
 
-ENV PORT="8080"
+RUN CGO_ENABLED=0 go build -o main ./main.go
 
-EXPOSE ${PORT}
+EXPOSE 8080
 
-VOLUME /go/src/static
-VOLUME /go/src/views
+VOLUME /app/static
+VOLUME /app/views
 
-
-CMD [ "/go/src/main","--mode=release","--staticDir=/go/src/static"  ]
-
+CMD [ "/app/main" ,"--mode=release","--staticDir=/go/src/static"]
